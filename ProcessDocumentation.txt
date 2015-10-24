@@ -1,0 +1,42 @@
+Processing Documentation
+
+With the following method, updates to the original data sheets in the workbook, Senior Center and Assisted Living Small, will be carried over to the Combined Data sheet.  In this way, the user does not have to update all sheets when making changes; only the original sheet needs to be updated and then the other fields on Combined Data will update, as well.
+1. Export data from data.howardcountymd.gov to CSV.  Export the files for Senior Centers and Assisted Living Small.
+2. Open file, Senior_Centers (it opens for me in Excel).
+3. Save the file to the desktop with the name “Information Organization - Seniors”.
+4. Open file, Assisted_Living_Small.
+5. Select all data from Assisted_Living_Small and paste it into a new sheet in the Information Organization - Seniors workbook.
+6. Save the file again.
+Select all of the data in the Assisted Living Small sheet. Paste it onto a new worksheet.
+7. Rename new worksheet “Combined Data”.
+8. Freeze the top row of data (the column names) by clicking the View tab and choosing Freeze Panes, Freeze Top Row.
+9. Go to the bottom on the sheet and make a space to add more data.
+Click in box A65. Type “=”. Then, click on the Senior Center sheet and click cell A2.  Press enter.
+10. In the Combined Data sheet, drag the box in the lower right corner of cell A65 on the Combined Data Sheet down to cell A76.  The data from the Senior Center sheet will now populate cells A66:A76. 
+11. Click cell B65 in Combined Data sheet. Enter “=” and go the the Senior Center sheet and click cell C2.  
+12. Drag the box in the lower right corner of cell B65 on the Combined Data Sheet down to cell B76.  The data from the Senior Center sheet will now populate cells B66-B76. 
+13. Next, in the Combined Data sheet, separate the Address field into two fields: Street Numbers and Street Names with the following instructions:
+  a. Select column C. 
+  b. Right Click and insert a column to the left.
+  c. Select Column D (this was column C). Under the Data tab, click Text to Columns.
+  d. Click the button for fixed width. Click Next.
+  e. Select 5 for fixed width and click next.
+  f. Change Destination to $C$1 so that the data goes into the new column C.
+  g. Rename Columns C, Number, and Column D Street.
+14. Click cell C65 in Combined Data sheet. Enter “=” and go the the Senior Center sheet and click cell E2.  
+15. Drag the box in the lower right corner of cell C65 on the Combined Data Sheet down to cell C76.  The data from the Senior Center sheet will now populate the other cells.
+16. Click cell D65 and enter this formula 
+  a. =’Senior Center”!G2&” “&”Senior Center’!H2
+  b. Click the box on the right to pull the formula to cell D76
+17. Following Steps 11 and 12, pull over the City, Zipcode, and geom data from the Senior Center sheet as in the other examples above.
+18. Pull field F64 down by the right corner box so that MD populates in fields F65:F76. Although the data sheet never says Maryland, we know Howard County is only in Maryland and so these columns can be filled in with MD.
+19. Adjust the column widths in all columns to see the full data in each cell.
+20. Name these columns that will brought over from Senior Center
+  a. UID = column J
+  b. PLACE_TYPE = column K
+  c. SUITE = column L
+  d. WORKPLACE = column M
+21. Copy these fields in from field 65 on so it matches the correct records.
+example - for UID, copy text from B2:B13 on Senior Center to J65:J76.
+22. Save the file.
+23. Note: Suite was an empty column on the Senior Center data set.
